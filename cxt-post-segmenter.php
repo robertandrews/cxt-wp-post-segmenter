@@ -73,8 +73,6 @@ function segment_post( $content ) {
         // keep title of the original h3
         // $segments[] = $h3->nodeValue;
 
-        
-        
 
         // 3. Wrap everything in <section> with .card class
         // custom function in /wp-content/plugins/cxt-bs-transformer/cxt-bs-transformer.php
@@ -100,7 +98,7 @@ function segment_post( $content ) {
         $new_div_clone->appendChild($card_body);
 
 
-
+        // TODO: This seems superfluous
         /*
         // 3. Also wrap with <section>
         // Initialise the new card_body
@@ -116,6 +114,7 @@ function segment_post( $content ) {
         $section_position++;
     }
 
+    // TODO: Ready for creating a table of contents
     // Make a Table of Contents
     // make sure we have segments (card is the last inserted card in the dom)
     /*
