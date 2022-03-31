@@ -8,7 +8,7 @@ Contributors: robertandrews
 
 ![Plugin screenshot](screenshot.png)
 
-This plugin makes impactful in-article cards from plain article areas denoted by `<h3>` crossheads and paragraph text beneath.
+This plugin makes impactful in-article cards from plain article areas denoted by groups of `<h3>` crossheads and paragraphs or other elements beneath.
 
 This is an article innovation which builds upon header crossheads, further breaking up posts, making them easier to read than long blocks of text.
 
