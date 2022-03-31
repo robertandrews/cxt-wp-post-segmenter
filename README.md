@@ -16,6 +16,8 @@ Publishers typically break up articles using header "crossheads". However, artic
 
 When presented as bordered segments, the reader's eye can more easily digest the whole article in sequential chunks.
 
+When imbued with `<section>` tags, these chunks give search engines useful clues about in-article content.
+
 ### Card creation
 
 The code finds H3 content "segments" in posts and wraps them as follows:
