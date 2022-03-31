@@ -12,6 +12,8 @@ This plugin makes impactful and semantically useful in-article "card" segments f
 
 This is an article innovation which builds upon header crossheads, further breaking up posts, making them easier to read than long blocks of text.
 
+Publishers typically break up articles using header "crossheads". However, articles still can feel burdensome to consume, adhering to centuries-old writing modalities.
+
 When presented as bordered segments, the reader's eye can more easily digest the whole article in sequential chunks.
 
 ### Card creation
