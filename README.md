@@ -8,11 +8,15 @@ Contributors: robertandrews
 
 ![Plugin screenshot](screenshot.png)
 
-This plugin makes impactful in-article cards from plain article areas denoted by `<h3>` crossheads and paragraph text beneath.
+This plugin makes impactful and semantically useful in-article "card" segments from plain article areas denoted by groups of `<h3>` crossheads and paragraphs or other elements beneath.
 
 This is an article innovation which builds upon header crossheads, further breaking up posts, making them easier to read than long blocks of text.
 
+Publishers typically break up articles using header "crossheads". However, articles still can feel burdensome to consume, adhering to centuries-old writing modalities.
+
 When presented as bordered segments, the reader's eye can more easily digest the whole article in sequential chunks.
+
+When imbued with `<section>` tags, these chunks give search engines useful clues about in-article content.
 
 ### Card creation
 
