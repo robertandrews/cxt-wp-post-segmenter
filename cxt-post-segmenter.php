@@ -76,6 +76,7 @@ function segment_post( $content ) {
 
         // 3. Wrap everything in <section> with .card class
         // custom function in /wp-content/plugins/cxt-bs-transformer/cxt-bs-transformer.php
+
         //Create new wrapper div
         $new_div = $dom->createElement('section');
         $new_div->setAttribute('class','card mb-3');
@@ -89,9 +90,21 @@ function segment_post( $content ) {
         
         // add in found image
         if (!empty($found_image)) {
-            // Add back here
+
+            /*
+            // Ratio wrapper div: create
+            $ratio_div = $dom->createElement('div');
+            $ratio_div->setAttribute('class','ratio cxt-card-ratio');
+            */
+
+            // Image: apply class
             $found_image->setAttribute('class', 'card-img-top');
-            $new_div_clone->appendChild($found_image);
+
+            // Put image into ratio wrapper
+            // $ratio_div->appendChild($found_image);
+
+            // Put completed ratio wrapper into div clone
+            $new_div_clone->appendChild($found_image);          // Otherwise, ratio_div
         }
         
         //Append the contents to card section
