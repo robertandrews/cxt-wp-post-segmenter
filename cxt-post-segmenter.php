@@ -29,12 +29,13 @@ License URI:    https://www.gnu.org/licenses/gpl-2.0.html
 add_filter( 'the_content', 'segment_post', 50 );
 function segment_post( $content ) {
 
-    $content = utf8_decode($content); // https://stackoverflow.com/questions/1269485/how-do-i-tell-domdocument-load-what-encoding-i-want-it-to-use
+    // $content = utf8_decode($content); // https://stackoverflow.com/questions/1269485/how-do-i-tell-domdocument-load-what-encoding-i-want-it-to-use
 
     // Load post as document object module
     $dom = new DOMDocument('1.0', 'iso-8859-1');
     libxml_use_internal_errors(true);
-    $dom->loadHTML($content);
+    // $dom->loadHTML($content);
+    $dom->loadhtml(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
     libxml_clear_errors();
 
     // Initialise variables
@@ -91,20 +92,18 @@ function segment_post( $content ) {
         // add in found image
         if (!empty($found_image)) {
 
-            /*
             // Ratio wrapper div: create
             $ratio_div = $dom->createElement('div');
-            $ratio_div->setAttribute('class','ratio cxt-card-ratio');
-            */
+            $ratio_div->setAttribute('class','ratio card-img-ratio');
 
             // Image: apply class
             $found_image->setAttribute('class', 'card-img-top');
 
             // Put image into ratio wrapper
-            // $ratio_div->appendChild($found_image);
+            $ratio_div->appendChild($found_image);
 
             // Put completed ratio wrapper into div clone
-            $new_div_clone->appendChild($found_image);          // Otherwise, ratio_div
+            $new_div_clone->appendChild($ratio_div);
         }
         
         //Append the contents to card section
